@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="clima">
+	<head>
+		<!--jquery.js-->
+		<script src="lib/jquery.js"></script>
+		<!--bootstrap.css-->
+		<link rel="stylesheet" href="lib/boo/css/bootstrap.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/style.css">
+		<meta charset="utf-8">
+		<title>Clima</title>
+	</head>
+	<body ng-controller="weather">
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 colu"><h1>Api_Clima</h1></div>
+			</div>
+		</div>
+
+		<div class="container con2">
+			<div class="row">
+				<div class="col-md-3" ng-repeat="cli in weatherB">
+					<p><strong>País:</strong> {{cli.data.sys.country}}</p>
+					<p><strong>Nombre:</strong> {{cli.data.name}}</p>
+					<p><strong>Velocidad del viento:</strong> {{cli.data.wind.speed}}</p>
+					<p><strong>temperatura:</strong> {{cli.data.main.temp}}</p>
+					<p><strong>presión:</strong> {{cli.data.main.pressure}}</p>
+					<p><strong>humedad:</strong> {{cli.data.main.humidity}}</p>
+					<p><strong>temperatura_minima:</strong> {{cli.data.main.temp_min}}</p>
+					<p><strong>temperatura_máxima:</strong> {{cli.data.main.temp_max}}</p>
+					<p><strong>dt:</strong> {{cli.data.dt}}</p>
+					<p><strong>id:</strong> {{cli.data.id}}</p>
+					<p><strong>longitud:</strong> {{cli.data.coord.lon}}</p>
+					<p><strong>latitud:</strong> {{cli.data.coord.lat}}</p>
+				</div>
+			</div>
+		</div>
+		<!--angular.js-->
+		<script src="lib/angular.js"></script>
+		<!--bootstrap.js-->
+		<script src="lib/boo/js/bootstrap.js"></script>
+		<!--script local-->
+		<script src="js/script.js"></script>
+	</body>
+</html>
